@@ -5,16 +5,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9FA58D5E-677E-44BD-A916-2BC934AF593D}</ProjectGuid>
+    <ProjectGuid>{C81BEE0B-FB4F-49C1-B903-D372EC7EF455}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FirstUseEntityFrameWork</RootNamespace>
-    <AssemblyName>FirstUseEntityFrameWork</AssemblyName>
+    <RootNamespace>DomainLayer</RootNamespace>
+    <AssemblyName>DomainLayer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,8 +45,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,13 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201911221059037_Initial.cs" />
-    <Compile Include="Migrations\201911221059037_Initial.designer.cs">
-      <DependentUpon>201911221059037_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="ModelOne.cs" />
-    <Compile Include="PartyManagerEF.cs" />
+    <Compile Include="PartyController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -76,11 +68,10 @@
       <Project>{8403ac15-2232-4c08-bbb5-0f5188added9}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911221059037_Initial.resx">
-      <DependentUpon>201911221059037_Initial.cs</DependentUpon>
-    </EmbeddedResource>
+    <ProjectReference Include="..\FirstUseEntityFrameWork\FirstUseEntityFrameWork.csproj">
+      <Project>{9fa58d5e-677e-44bd-a916-2bc934af593d}</Project>
+      <Name>FirstUseEntityFrameWork</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

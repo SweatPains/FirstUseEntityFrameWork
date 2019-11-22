@@ -1,20 +1,13 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EntityLayer;
 
 namespace FirstUseEntityFrameWork
 {
-   public class Program
+   public interface IDatabase<T>
     {
-        static void Main(string[] args)
-        {
-
-           
-
-
-        }
+        void Create(T entity);
     }
 }
