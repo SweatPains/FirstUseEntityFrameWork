@@ -59,9 +59,18 @@
     <Compile Include="Migrations\201911221059037_Initial.designer.cs">
       <DependentUpon>201911221059037_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911231416237_PartyLocation.cs" />
+    <Compile Include="Migrations\201911231416237_PartyLocation.designer.cs">
+      <DependentUpon>201911231416237_PartyLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911231450026_PolyClass.cs" />
+    <Compile Include="Migrations\201911231450026_PolyClass.designer.cs">
+      <DependentUpon>201911231450026_PolyClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelOne.cs" />
     <Compile Include="PartyManagerEF.cs" />
+    <Compile Include="PolyClassManagerEF.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -80,6 +89,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201911221059037_Initial.resx">
       <DependentUpon>201911221059037_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911231416237_PartyLocation.resx">
+      <DependentUpon>201911231416237_PartyLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911231450026_PolyClass.resx">
+      <DependentUpon>201911231450026_PolyClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

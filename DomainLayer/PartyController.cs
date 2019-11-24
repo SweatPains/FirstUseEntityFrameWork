@@ -16,5 +16,10 @@ namespace DomainLayer
         {
             partyEFContext.Create(party);
         }
+
+        public List<Party> ReadAllParty()
+        {
+            return partyEFContext.Read();
+        }
     }
 }

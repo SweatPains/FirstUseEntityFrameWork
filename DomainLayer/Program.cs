@@ -9,13 +9,31 @@ namespace DomainLayer
     {
         static void Main(string[] args)
         {
-
+            /*
             PartyController partyController = new PartyController();
-            Party party = new Party();
-            party.Name = "Hellom From Domain: Party";
-            partyController.CreateParty(party);
+            Party partyObj = new Party();
+            partyObj.Name = "blank";
+            partyObj.PolyClass = new PolyClass();
 
+            partyController.CreateParty(partyObj);
+            */
+            
+            
+            PolyClassController polyController = new PolyClassController();
+            PolyClass polyObj = new PolyClass();
+            List<Party> partyList = new List<Party>();
 
+            for (int i = 0; i < 5; i++)
+            {
+                Party partyObj = new Party();
+                partyObj.Name = $"blank{ i}";
+                partyList.Add(partyObj);
+
+            }
+
+            polyObj.Parties = partyList;
+            polyController.CreatePoly(polyObj);
+            
         }
     }
 }

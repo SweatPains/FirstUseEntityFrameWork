@@ -21,6 +21,7 @@ namespace FirstUseEntityFrameWork
         }
 
         public virtual DbSet<Party> Parties { get; set; }
+        public virtual DbSet<PolyClass> PolyClasses { get; set; }
 
     }
        

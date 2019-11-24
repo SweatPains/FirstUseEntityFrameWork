@@ -7,19 +7,14 @@ using EntityLayer;
 
 namespace FirstUseEntityFrameWork
 {
-    public class PartyManagerEF
+    public class PolyClassManagerEF
     {
         private ModelOne model = new ModelOne();
 
-        public void Create(Party party)
+        public void Create(PolyClass polyClass)
         {
-            model.Parties.Add(party);
+            model.PolyClasses.Add(polyClass);
             model.SaveChanges();
-        }
-
-        public List<Party> Read()
-        {
-           return model.Parties.ToList();
         }
     }
 }
